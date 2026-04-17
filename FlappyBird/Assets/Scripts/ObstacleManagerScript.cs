@@ -6,6 +6,7 @@ public class ObstacleManagerScript : MonoBehaviour
 {
     [SerializeField] GameObject obstaclePrefab;
     [SerializeField] float spawnInterval = 2f;
+    
     [SerializeField] Transform spawnPointXpos;
     
     void Start()
@@ -16,6 +17,8 @@ public class ObstacleManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Accelerate game speed over time with time acceleration and max speed
+
         
     }
 
@@ -26,7 +29,7 @@ public class ObstacleManagerScript : MonoBehaviour
         Instantiate(obstaclePrefab, new Vector3(spawnPointXpos.position.x, Random.Range(-10f, -6f), 0), Quaternion.identity);
     }
 
-    //, new Vector3(transform.position.y, Random.Range(-4f, 4f), 0),
+    // new Vector3(transform.position.y, Random.Range(-4f, 4f), 0),
     IEnumerator SpawnObstacleAtIntervals()
     {
         while (true)
