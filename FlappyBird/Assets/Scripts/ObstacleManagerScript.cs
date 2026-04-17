@@ -7,6 +7,7 @@ public class ObstacleManagerScript : MonoBehaviour
     [SerializeField] GameObject obstaclePrefab;
     [SerializeField] float spawnInterval = 2f;
     [SerializeField] Transform spawnPointXpos;
+    
     void Start()
     {
         StartCoroutine(SpawnObstacleAtIntervals());
@@ -34,6 +35,8 @@ public class ObstacleManagerScript : MonoBehaviour
             yield return new WaitForSeconds(spawnInterval); 
         }
     }
+
+    
 
 
     //instantiate obstacle at random y position at set time intervals with Ienumeator
