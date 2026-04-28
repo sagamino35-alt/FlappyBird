@@ -24,6 +24,7 @@ public class MovementScript : MonoBehaviour
     {
         if (jumpAction.WasPerformedThisFrame())
         {
+            pRb.linearVelocityY = 0;
             pRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
 

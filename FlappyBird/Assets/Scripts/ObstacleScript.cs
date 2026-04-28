@@ -3,8 +3,14 @@ using UnityEngine;
 public class ObstacleScript : MonoBehaviour
 {
     Rigidbody2D oRb;
-    [SerializeField] float MoveSpeed = 100;
-    
+    public float MoveSpeed = 10;
+
+
+
+    [SerializeField] float MoveSpeedOT = 1;
+    //lägger till .1 för varje sekund 
+
+
     void Start()
     {
         oRb = GetComponent<Rigidbody2D>();
